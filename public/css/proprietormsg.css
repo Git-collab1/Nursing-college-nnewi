@@ -1,207 +1,99 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-
-html,
-body {
-  font-family: "Rubik", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  height: 100%;
+/* ====== RESET ====== */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f8f9fa;
-  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-:root {
-  --yellow-color: #ffc947;
-  --white-color: #fff;
-  --bg-color: #202022;
+body {
+  line-height: 1.6;
+  background: #f8f9fa;
+  color: #333;
 }
 
-a,
-a:hover {
-  text-decoration: none;
-}
-
+/* ====== TOPBAR ====== */
 #topbar {
-  background-color: #15477A;
+  /* background: #0062cc; */
+  background: #5e5c6c;
   color: #fff;
-  height: 50px;
-  line-height: 50px;
+  font-size: 0.9rem;
+  padding: 5px 0;
 }
 
-.top-contact,
-.sosmed {
-  list-style: none;
-  padding: 0;
-}
-
-#topbar li {
-  display: inline-block;
-}
-
-#topbar li a {
-  color: #fff;
-  display: inline-block;
-  padding: 0 20px;
-}
-
-#topbar li a i {
-  color: #f2c808;
+#topbar i {
   margin-right: 5px;
 }
 
-#topbar .sosmed li a {
-  padding: 0 5px;
-}
-
-#topbar .sosmed li a i {
+.topbar a {
   color: #fff;
+  text-decoration: none;
 }
 
-/* ============ Header ============== */
-header {
-  /* padding: 30px 0; */
+.sosmed li {
+  margin-left: 10px;
 }
 
-.brand {
-  display: flex;
-  align-items: center;
-  align-content: center;
+/* ====== HEADER ====== */
+.header {
+  background: #fff;
+  padding: 15px 0;
+  border-bottom: 5px solid #ddd;
 }
 
 .brand img {
-  margin-right: 6px;
-  width: 10rem;
-  height: 10rem;
+  height: 150px;
 }
 
-.brand .brand-name h1 {
-  font-size: 25px;
-  color: #15477A;
-  text-transform: uppercase;
+.brand-name h1 {
+  font-size: 1.5rem;
+  /* color: #0062cc; */
 }
 
-.brand .brand-name h3 {
-  font-size: 18px;
-  font-family: Raleway, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #888888;
+.brand-name h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #333;
 }
 
-.searchbox-wrapper {
-  display: flex;
-  align-items: center;
+.searchbox p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #8C6A5D;
 }
 
-.searchbox {
-  width: 100%;
-}
-
-.btn.btn-primary {
-  background-color: #15477A;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 600;
-  transition: background-color 0.3s;
-}
-
-.btn.btn-primary:hover {
-  background-color: #7f885fd5;
-}
-
-/* =============== Css Menu ================== */
-
+/* ====== NAVBAR ====== */
 .navbar {
   padding: 0;
-  border-bottom: 5px solid #888820;
+  background: #8C6A5D;
+  border-bottom: 5px solid #181C14;
 }
 
-.nav-link {
-  font-size: 16px;
-  text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: 0.25px;
+.navbar .nav-link {
+  color: #fff;
+  font-weight: 500;
+  margin-right: 25px;
+  font-size: 1.2rem;
+  padding: 15px;
 }
 
-.bg-light {
-  background-color: #15477A !important;
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #ffc107;
+}
+
+.navbar .dropdown-menu {
+  background: #181C14;
+}
+
+.navbar .dropdown-item {
   color: #fff;
 }
 
-.navbar-dark .navbar-nav .nav-link {
-  color: #fff;
+.navbar .dropdown-item:hover {
+  background: #8C6A5D;
+  color: #ECDFCC;
 }
-
-.navbar-dark .navbar-nav .active>.nav-link,
-.navbar-dark .navbar-nav .nav-link.active,
-.navbar-dark .navbar-nav .nav-link.show,
-.navbar-dark .navbar-nav .show>.nav-link {
-  background-color: #f2c808;
-  color: #fff;
-}
-
-.active1 {
-  background-color: #f2c808;
-  color: #15477A;
-}
-
-.dropdown-menu .dropdown-item {
-  padding: 12px;
-  font-size: 18px;
-  text-transform: capitalize;
-}
-
-li.nav-item.active a {
-  color: #15477A;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-  padding: 18px 12px;
-  display: inline-block;
-}
-
-@media (max-width: 1059px) {
-  #topbar {
-    display: none;
-  }
-}
-
-
-@media (max-width: 1017px) {
-
-  .brand img {
-    width: 6rem;
-    height: 6rem;
-  }
-
-  .brand .brand-name h1 {
-    font-size: 20px;
-  }
-
-  .brand .brand-name h3 {
-    font-size: 15px;
-  }
-
-  .searchbox p {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 984px) {
-  .brand .brand-name h1 {
-    font-size: 18px;
-  }
-
-  .brand .brand-name h3 {
-    font-size: 12px;
-  }
-
-  .searchbox p {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 579px) {}
 
 /* Hero Section */
 .proprietor-hero {
