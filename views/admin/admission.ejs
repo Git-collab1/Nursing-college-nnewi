@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="/css/portal.css">
+</head>
+
+<body>
+<h2>Submitted Admissions</h2>
+<table border="1" cellspacing="0" cellpadding="8">
+  <tr>
+    <th>Student Name</th>
+    <th>Receipt No.</th>
+    <th>Course</th>
+    <th>Status</th>
+    <th>Actions</th>
+  </tr>
+  <% admissions.forEach(a => { %>
+    <tr>
+      <td><%= a.personalData.fullName %></td>
+      <td><%= a.receiptNo %></td>
+      <td><%= a.choiceOfCourse.course %></td>
+      <td><%= a.status %></td>
+      <td>
+        <% if(a.status === "pending") { %>
+          <form action="/admin/admissions/<%= a._id %>/approve" method="POST" style="display:inline;">
+            <button type="submit">Approve</button>
+          </form>
+          <form action="/admin/admissions/<%= a._id %>/reject" method="POST" style="display:inline;">
+            <button type="submit">Reject</button>
+          </form>
+        <% } else { %>
+          -
+        <% } %>
+      </td>
+    </tr>
+  <% }) %>
+</table>
+
+</body>
+
+</html>

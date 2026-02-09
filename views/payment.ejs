@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment | Legend College of Nursing Science</title>
+  <link rel="stylesheet" href="/css/portal.css">
+</head>
+<body>
+
+  <header class="top-bar">
+    <h1>Legend College of Nursing Science</h1>
+    <p>Payment Portal</p>
+  </header>
+
+  <div class="form-wrapper small">
+    <h2>Step 2: Payment</h2>
+    <p class="form-note">Please pay the admission fee and upload your payment receipt below.</p>
+
+    <div class="payment-box">
+      <p><strong>Bank:</strong> <%= bank %></p>
+      <p><strong>Account Name:</strong> <%= accountName %></p>
+      <p><strong>Account Number:</strong> <%= accountNumber %></p>
+      <p><strong>Amount to Pay:</strong> ₦<%= amount %></p>
+    </div>
+
+    <form action="/payment" method="POST" enctype="multipart/form-data">
+      <div class="upload-box">
+        <label for="receipt">Upload Payment Receipt:</label>
+        <input type="file" name="paymentReceipt" id="receipt" required>
+      </div>
+
+      <button type="submit" class="btn primary full">Submit Payment</button>
+    </form>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2026 Legend College of Nursing Science</p>
+  </footer>
+
+</body>
+</html>

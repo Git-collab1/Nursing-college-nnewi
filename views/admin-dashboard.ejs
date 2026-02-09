@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="/css/portal.css">
+</head>
+<body>
+  <header class="top-bar">
+    <h1>Admin Dashboard</h1>
+    <a href="/admin/logout" style="color:white; float:right; margin-right:20px;">Logout</a>
+  </header>
+
+  <div class="form-wrapper">
+    <h2>Admissions Overview</h2>
+    <table>
+      <tr>
+        <th>Student Name</th>
+        <th>Email</th>
+        <th>Course</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+      <% admissions.forEach(adm => { %>
+      <tr>
+        <td><%= adm.personalData.fullName %></td>
+        <td><%= adm.personalData.email %></td>
+        <td><%= adm.choiceOfCourse.course %></td>
+        <td><%= adm.status || "pending" %></td>
+        <td>
+          <% if (adm.status === "pending") { %>
+            <a href="/admin/approve/<%= adm._id %>">Approve</a> |
+            <a href="/admin/reject/<%= adm._id %>">Reject</a>
+          <% } else { %>
+            <%= adm.status %>
+          <% } %>
+        </td>
+      </tr>
+      <% }) %>
+    </table>
+  </div>
+</body>
+</html>

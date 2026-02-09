@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Admission Form | Legend College of Nursing Science</title>
+  <link rel="stylesheet" href="/css/portal.css">
+  <script>
+    function addExamRow() {
+      const table = document.getElementById("examTable");
+      const row = table.insertRow(-1);
+
+      row.innerHTML = `
+      <td><input name="examName[]" required></td>
+      <td><input type="date" name="examDate[]" required></td>
+      <td><input name="examNo[]" required></td>
+      <td><input name="subjects[]" required></td>
+      <td><input name="grades[]" required></td>
+      <td>
+        <label><input type="checkbox" name="credentials[]" value="X"> X</label>
+        <label><input type="checkbox" name="credentials[]" value="AR"> AR</label>
+      </td>
+    `;
+    }
+  </script>
+
+</head>
+
+<body>
+
+  <header class="top-bar">
+    <h1>Legend College of Nursing Science</h1>
+    <p>Application for Admission</p>
+  </header>
+
+  <div class="form-wrapper">
+    <form action="/admission/preview" method="POST" enctype="multipart/form-data">
+
+      <!-- ================= SECTION 0 ================= -->
+      <h2>Receipt & Passport</h2>
+      <div class="grid">
+        <input name="receiptNo" placeholder="Receipt No" required>
+        <input name="dd" placeholder="DD" required>
+        <input name="mm" placeholder="MM" required>
+        <input name="yy" placeholder="YYYY" required>
+
+        <label>Candidate Passport:</label>
+        <input type="file" name="candidatePassport" accept="image/*" required>
+      </div>
+
+
+      <!-- ================= SECTION 1 ================= -->
+      <h2>1. PERSONAL DATA OF APPLICANT</h2>
+      <div class="grid">
+        <input name="fullName" placeholder="Full Name (Mr./Miss/Mrs)" required>
+        <input name="contactAddress" placeholder="Contact Address" required>
+        <select name="sex" required>
+          <option value="">Sex</option>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+        <input type="date" name="dob" placeholder="Date of Birth" required>
+        <input name="maritalStatus" placeholder="Marital Status" required>
+        <input name="maidenName" placeholder="Maiden Name (if married)">
+        <input name="phone" placeholder="Phone Number" required>
+        <input name="email" placeholder="Email" required>
+        <input name="stateOfOrigin" placeholder="State of Origin">
+        <input name="nationality" placeholder="Nationality">
+        <input name="localGovernment" placeholder="Local Government Area">
+        <input name="extraCurricular" placeholder="Extra Curricular Activities (sports, hobbies)">
+        <input name="medicalHistory" placeholder="Medical History">
+      </div>
+
+
+      <!-- ================= SECTION 2 ================= -->
+      <h2>2. INFORMATION ABOUT APPLICANT'S PARENTS</h2>
+
+      <div class="grid">
+        <input name="fatherName" placeholder="Father's Full Name" required>
+        <input name="fatherContactAddress" placeholder="Father's Contact Address" required>
+        <input name="fatherPhone" placeholder="Father's Phone Number" required>
+        <input name="fatherEmail" placeholder="Father's Email Address">
+
+        <input name="motherName" placeholder="Mother's Full Name" required>
+        <input name="motherMaidenName" placeholder="Mother's Maiden Name">
+        <input name="motherContactAddress" placeholder="Mother's Contact Address" required>
+        <input name="motherPhone" placeholder="Mother's Phone Number" required>
+        <input name="motherEmail" placeholder="Mother's Email Address">
+
+      </div>
+
+
+      <!-- ================= SECTION 3 ================= -->
+      <h2>3. CHOICE OF COURSE</h2>
+      <div class="radio-group">
+        <label><input type="radio" name="course" value="HND Nursing" required> HND Nursing</label>
+        <label><input type="radio" name="course" value="B.Sc Nursing"> B.Sc Nursing</label>
+        <label><input type="radio" name="course" value="Nursing Science"> Nursing Science</label>
+      </div>
+
+      <div class="radio-group">
+        <label>Program Transfer:
+          <input type="radio" name="programTransfer" value="Yes"> Yes
+        </label>
+        <label>
+          <input type="radio" name="programTransfer" value="No"> No
+        </label>
+      </div>
+
+      <div class="radio-group">
+        <label><input type="radio" name="programMode" value="Regular"> Regular Program</label>
+        <label><input type="radio" name="programMode" value="Evening"> Evening Program</label>
+      </div>
+
+      <!-- ================= SECTION 4 ================= -->
+      <h2>4. EDUCATION</h2>
+      <p class="section-note">
+        4a. Examination Taken:
+        <label><input type="checkbox" name="examTaken[]" value="WAEC"> WAEC</label>
+        <label><input type="checkbox" name="examTaken[]" value="NECO"> NECO</label>
+        <label><input type="checkbox" name="examTaken[]" value="Other"> Other</label>
+      </p>
+
+
+      <p class="section-note">
+        4b. Details of Examination(s) Passed or Entered For
+        (Photocopies of certificates or statements of result must be attached)
+      </p>
+
+      <table id="examTable">
+        <tr>
+          <th>Exam Name</th>
+          <th>Exam Date</th>
+          <th>Exam No</th>
+          <th>Subjects Offered</th>
+          <th>Grades</th>
+          <th>Credentials</th>
+        </tr>
+        <tr>
+          <td><input name="examName[]" required></td>
+          <td><input type="date" name="examDate[]" required></td>
+          <td><input name="examNo[]" required></td>
+          <td><input name="subjects[]" required></td>
+          <td><input name="grades[]" required></td>
+          <td>
+            <label><input type="checkbox" name="credentials[]" value="X"> X</label>
+            <label><input type="checkbox" name="credentials[]" value="AR"> AR</label>
+          </td>
+        </tr>
+      </table>
+      <button type="button" class="add-btn" onclick="addExamRow()">+ Add Another Examination</button>
+
+      <!-- ================= SECTION 5 ================= -->
+      <h2>5. INTRODUCTION TO LEGEND COLLEGE OF NURSING SCIENCE</h2>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="introSource" value="Advertisement"> Advertisement</label>
+        <label><input type="checkbox" name="introSource" value="Student"> Student</label>
+        <label><input type="checkbox" name="introSource" value="Parent"> Parent</label>
+        <label><input type="checkbox" name="introSource" value="Staff"> Staff</label>
+      </div>
+
+
+      <!-- ================= SECTION 6 ================= -->
+      <h2>6. DECLARATION</h2>
+      <p>I <input type="text" name="declaration" required placeholder="Your Name"> hereby declare that all information
+        provided above is true.</p>
+
+      <!-- ================= SUBMIT ================= -->
+      <button type="submit" class="submit-btn">Proceed to Payment</button>
+
+    </form>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2026 Legend College of Nursing Science</p>
+  </footer>
+
+</body>
+
+</html>
