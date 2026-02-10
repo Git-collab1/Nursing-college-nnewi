@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/contact.css">
 </head>
 
 <body>
@@ -51,7 +51,7 @@
         </div>
       </div>
       <div class="searchbox">
-        <!-- <p>WELCOME TO LEGEND COLLEGE OF HEALTH SCIENCES</p> -->
+        <!-- Optional Search / Banner -->
       </div>
     </div>
   </header>
@@ -95,7 +95,7 @@
     </div>
   </nav>
 
-
+  <!-- Contact Page -->
   <section class="contact-page">
     <div class="contact-header">
       <h2>Contact Us</h2>
@@ -115,12 +115,14 @@
       <!-- Contact Form -->
       <div class="form-container">
         <form action="/contact" method="POST" class="contact-form">
-          <% if (messages.error) { %>
+
+          <% if (typeof messages !=='undefined' && messages.error) { %>
             <div class="alert alert-danger">
               <%= messages.error %>
             </div>
             <% } %>
-              <% if (messages.success) { %>
+
+              <% if (typeof messages !=='undefined' && messages.success) { %>
                 <div class="alert alert-success">
                   <%= messages.success %>
                 </div>
@@ -164,7 +166,6 @@
       </div>
     </div>
   </section>
-
 
   <!-- Footer Section -->
   <footer class="footer-modern">
@@ -221,7 +222,6 @@
   <button id="backToTop" title="Back to Top">↑</button>
 
   <script>
-    // Back to Top Button
     const backToTop = document.getElementById('backToTop');
     window.onscroll = function () {
       if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
@@ -230,26 +230,10 @@
         backToTop.style.display = "none";
       }
     };
-
     backToTop.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- ============== Owl Carousel JS ================ -->
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

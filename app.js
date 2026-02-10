@@ -28,14 +28,14 @@ app.use(session({
 connectDB();
 
 // ----------------- ROUTES -----------------
-const pageRoute = require("./routes/page"); // home page with register/login links
+const pageRoutes = require("./routes/page"); // home page with register/login links
 const studentRoute = require("./routes/student"); // register/login/logout/dashboard
 const admissionRoute = require("./routes/admission"); // admission form
 const paymentRoute = require("./routes/payment"); // payment form
 const adminRoutes = require("./routes/admin");
 
 
-app.use("/", pageRoute);
+app.use("/", pageRoutes);
 app.use("/student", studentRoute);
 app.use("/admission", admissionRoute);
 app.use("/payment", paymentRoute);

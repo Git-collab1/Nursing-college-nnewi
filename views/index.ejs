@@ -14,8 +14,8 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="/css/style.css">
@@ -23,35 +23,29 @@
 
 <body>
 
-  <!-- Topbar -->
+  <!-- ================= TOPBAR ================= -->
   <section id="topbar">
     <div class="container d-flex justify-content-between align-items-center">
-      <ul class="top-contact list-inline mb-0">
-        <li class="list-inline-item"><i class="fas fa-phone"></i> +447-09876543234567654</li>
-        <li class="list-inline-item"><i class="fas fa-envelope"></i> info@gmail.com</li>
-        <li class="list-inline-item"><i class="fas fa-bullhorn"></i> 2025/2026</li>
-      </ul>
-      <ul class="sosmed list-inline mb-0">
-        <li class="list-inline-item"><i class="fab fa-facebook-f"></i></li>
-        <li class="list-inline-item"><i class="fab fa-instagram"></i></li>
-        <li class="list-inline-item"><i class="fab fa-whatsapp"></i></li>
-        <li class="list-inline-item"><i class="fab fa-twitter"></i></li>
-      </ul>
+      <div>
+        <span><i class="fas fa-phone"></i> +234 801 234 5678</span>
+        <span class="ml-3"><i class="fas fa-envelope"></i> info@legendcollege.edu.ng</span>
+      </div>
+      <div>
+        <i class="fab fa-facebook-f mx-2"></i>
+        <i class="fab fa-instagram mx-2"></i>
+        <i class="fab fa-twitter mx-2"></i>
+        <i class="fab fa-whatsapp mx-2"></i>
+      </div>
     </div>
   </section>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="container d-flex justify-content-between align-items-center">
-      <div class="brand d-flex align-items-center">
-        <img src="/images/LEGEND_COLLEGE_LOGO_015925-removebg-preview.png" alt="Logo">
-        <div class="brand-name ml-3">
-          <h1>LEGEND UNIVERSITY</h1>
-          <h3>Legend College of Health Sciences</h3>
-        </div>
-      </div>
-      <div class="searchbox">
-        <!-- <p>WELCOME TO LEGEND COLLEGE OF HEALTH SCIENCES</p> -->
+  <!-- ================= HEADER ================= -->
+  <header class="main-header">
+    <div class="container d-flex align-items-center">
+      <img src="/images/LEGEND_COLLEGE_LOGO_015925-removebg-preview.png" alt="Legend College Logo">
+      <div class="ml-3">
+        <h1>LEGEND UNIVERSITY</h1>
+        <p>Legend College of Health Sciences</p>
       </div>
     </div>
   </header>
@@ -95,177 +89,167 @@
     </div>
   </nav>
 
-  <!-- Hero Carousel -->
-  <div id="carouselHeroFade" class="carousel slide carousel-fade" data-ride="carousel" data-interval="4000">
+  <!-- ================= HERO SLIDER ================= -->
+  <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="4500">
+
     <ol class="carousel-indicators">
-      <li data-target="#carouselHeroFade" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselHeroFade" data-slide-to="1"></li>
-      <li data-target="#carouselHeroFade" data-slide-to="2"></li>
+      <li data-target="#heroCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#heroCarousel" data-slide-to="1"></li>
+      <li data-target="#heroCarousel" data-slide-to="2"></li>
     </ol>
+
     <div class="carousel-inner">
+
       <div class="carousel-item active">
         <img src="/images/educational-university-building.jpg" class="d-block w-100" alt="Campus">
         <div class="carousel-caption">
-          <h5>Welcome to Our College</h5>
-          <p>Empowering future healthcare leaders through innovation and excellence.</p>
-          <a href="/portal" class="btn btn-apply">Apply Now</a>
+          <h2>Excellence in Health Education</h2>
+          <p>Training compassionate healthcare professionals for the future.</p>
+          <a href="/admissionprocedure" class="btn btn-success btn-lg">Apply Now</a>
         </div>
       </div>
+
       <div class="carousel-item">
-        <img src="/images/legend-web3.jpg" class="d-block w-100" alt="Classroom">
+        <img src="/images/legend-web3.jpg" class="d-block w-100" alt="Facilities">
         <div class="carousel-caption">
-          <h5>Modern Learning Environment</h5>
-          <p>Interactive classes with cutting-edge digital technology.</p>
-          <a href="/portal" class="btn btn-apply">Apply Now</a>
+          <h2>Modern Learning Facilities</h2>
+          <p>Hands-on clinical training in a conducive environment.</p>
+          <a href="/courses" class="btn btn-success btn-lg">View Courses</a>
         </div>
       </div>
+
       <div class="carousel-item">
         <img src="/images/legend-web2.jpg" class="d-block w-100" alt="Students">
         <div class="carousel-caption">
-          <h5>Join Our Academic Community</h5>
-          <p>Shape your future with a strong academic foundation.</p>
-          <a href="/portal" class="btn btn-apply">Apply Now</a>
+          <h2>Build Your Healthcare Career</h2>
+          <p>Accredited programs that open doors worldwide.</p>
+          <a href="/register" class="btn btn-success btn-lg">Get Started</a>
         </div>
       </div>
+
     </div>
-    <a class="carousel-control-prev" href="#carouselHeroFade" role="button" data-slide="prev">
+
+    <a class="carousel-control-prev" href="#heroCarousel" data-slide="prev">
       <span class="carousel-control-prev-icon"></span>
     </a>
-    <a class="carousel-control-next" href="#carouselHeroFade" role="button" data-slide="next">
+
+    <a class="carousel-control-next" href="#heroCarousel" data-slide="next">
       <span class="carousel-control-next-icon"></span>
     </a>
-    <div class="scroll-down" onclick="document.getElementById('about-section').scrollIntoView({behavior:'smooth'})">⌄
-    </div>
+
   </div>
 
-  <!-- About Section -->
-  <section id="about-section" class="about-section">
-    <div class="about-container">
-      <div class="about-image animate-left">
-        <img src="/images/library-bg.jpg" alt="Campus">
-      </div>
-      <div class="about-content animate-right">
-        <h2>About Legend College</h2>
-        <p>Legend College of Nursing Sciences trains compassionate, skilled healthcare professionals in a serene and
-          modern learning environment.</p>
-        <p>Our programs instill moral values, leadership, and clinical competence in every student.</p>
-        <a href="/overview" class="about-btn">College Overview</a>
+  <!-- ================= ABOUT ================= -->
+  <section class="section-padding bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <div class="col-md-6">
+          <img src="/images/library-bg.jpg" class="img-fluid rounded" alt="Campus">
+        </div>
+
+        <div class="col-md-6">
+          <h3>About Legend College</h3>
+          <p>
+            Legend College of Health Sciences is committed to producing
+            skilled, ethical, and compassionate healthcare professionals.
+          </p>
+          <p>
+            Our programs emphasize both academic excellence and
+            real-world clinical experience.
+          </p>
+          <a href="/overview" class="btn btn-outline-primary">Learn More</a>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Cards Section -->
-  <section class="cards-section">
-    <div class="card-container">
-      <div class="card animate-up">
-        <img src="/images/campus-bg.jpg" alt="Campus">
-        <div class="card-content">
-          <h3>Our Campus</h3>
-          <p>Explore state-of-the-art facilities and welcoming environment.</p>
-          <a href="/about" class="btn-card">Learn More</a>
+  <!-- ================= WHY CHOOSE US ================= -->
+  <section class="section-padding">
+    <div class="container text-center">
+      <h3 class="mb-5">Why Choose Legend College?</h3>
+
+      <div class="row">
+
+        <div class="col-md-4">
+          <div class="info-card">
+            <i class="fas fa-user-nurse"></i>
+            <h5>Professional Training</h5>
+            <p>Hands-on experience with modern healthcare facilities.</p>
+          </div>
         </div>
-      </div>
-      <div class="card animate-up">
-        <img src="/images/nursing-class.jpg" alt="Nursing Class">
-        <div class="card-content">
-          <h3>Courses Offered</h3>
-          <p>Comprehensive programs preparing students for success.</p>
-          <a href="/courses" class="btn-card">View Courses</a>
+
+        <div class="col-md-4">
+          <div class="info-card">
+            <i class="fas fa-school"></i>
+            <h5>Conducive Environment</h5>
+            <p>A serene campus that supports effective learning.</p>
+          </div>
         </div>
-      </div>
-      <div class="card animate-up">
-        <img src="/images/laboratory.jpg" alt="Laboratory">
-        <div class="card-content">
-          <h3>Labs & Facilities</h3>
-          <p>Hands-on experience in modern laboratories.</p>
-          <a href="/facilities" class="btn-card">Explore</a>
+
+        <div class="col-md-4">
+          <div class="info-card">
+            <i class="fas fa-award"></i>
+            <h5>Accredited Programs</h5>
+            <p>Recognized qualifications with global relevance.</p>
+          </div>
         </div>
-      </div>
-      <div class="card animate-up">
-        <img src="/images/students.jpg" alt="Students">
-        <div class="card-content">
-          <h3>Student Life</h3>
-          <p>Clubs, events, and community activities for students.</p>
-          <a href="/student-life" class="btn-card">Discover</a>
-        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Values Section -->
-  <section id="values" class="values-section">
-    <h2>VALUES</h2>
-    <p>We uphold these values and encourage them in others</p>
-    <div class="values-grid">
-      <div class="value animate-up"><i class="fas fa-bullseye"></i>
-        <h4>Accountability</h4>
-        <p>Responsible actions and results.</p>
-      </div>
-      <div class="value animate-up"><i class="fas fa-hand-holding-heart"></i>
-        <h4>Altruism</h4>
-        <p>Selfless service to others.</p>
-      </div>
-      <div class="value animate-up"><i class="fas fa-users"></i>
-        <h4>Collaboration</h4>
-        <p>Teamwork and innovation.</p>
-      </div>
-      <div class="value animate-up"><i class="fas fa-heart"></i>
-        <h4>Compassion</h4>
-        <p>Empathy in education and care.</p>
-      </div>
-      <div class="value animate-up"><i class="fas fa-lightbulb"></i>
-        <h4>Creativity</h4>
-        <p>Innovative thinking and solutions.</p>
-      </div>
-      <div class="value animate-up"><i class="fas fa-search"></i>
-        <h4>Curiosity</h4>
-        <p>A spirit of inquiry.</p>
-      </div>
+  <!-- ================= CTA ================= -->
+  <section class="cta-section text-center">
+    <div class="container">
+      <h3>Admission Now Open</h3>
+      <p>Apply for the 2025 / 2026 academic session.</p>
+      <a href="/register" class="btn btn-light btn-lg">Apply Now</a>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer-modern">
-    <div class="footer-top">
-      <div class="footer-column">
-        <h3>About Legend College</h3>
-        <p>Committed to world-class nursing education and compassionate healthcare professionals.</p>
-      </div>
-      <div class="footer-column">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#programs">Programs</a></li>
-          <li><a href="#admissions">Admissions</a></li>
-          <li><a href="/application">Application Form</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h3>Contact Us</h3>
-        <p>123 Nursing Avenue, Lagos, Nigeria</p>
-        <p>Email: info@legendcollege.edu.ng</p>
-        <p>Phone: +234 801 234 5678</p>
-        <div class="social-links">
-          <a class="social-btn">Facebook</a>
-          <a class="social-btn">Twitter</a>
-          <a class="social-btn">Instagram</a>
-          <a class="social-btn">Whatsapp</a>
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-4">
+          <h5>Legend College</h5>
+          <p>
+            Empowering future healthcare professionals through
+            quality education and ethical practice.
+          </p>
         </div>
+
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="/overview">About</a></li>
+            <li><a href="/courses">Courses</a></li>
+            <li><a href="/admissionprocedure">Admissions</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h5>Contact</h5>
+          <p>Email: info@legendcollege.edu.ng</p>
+          <p>Phone: +234 801 234 5678</p>
+        </div>
+
       </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Legend College of Nursing Sciences. All Rights Reserved.</p>
+
+      <div class="footer-bottom text-center mt-4">
+        <p>&copy; 2025 Legend College of Health Sciences. All Rights Reserved.</p>
+      </div>
     </div>
   </footer>
 
-  <button id="backToTop">↑</button>
-
-  <!-- JS -->
+  <!-- ================= JS ================= -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-  <script src="/js/script.js"></script>
 
 </body>
 

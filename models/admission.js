@@ -90,4 +90,4 @@ const admissionSchema = new mongoose.Schema({
 });
 
 
-module.exports = mongoose.model("Admission", admissionSchema);
+module.exports = mongoose.models.Admission || mongoose.model("Admission", admissionSchema);
